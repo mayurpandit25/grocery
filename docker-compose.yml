@@ -10,7 +10,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./GroceryBE
+    build: ./GroceryAppBE-
     container_name: grocery-backend
     ports:
       - "5000:5000"
@@ -20,7 +20,7 @@ services:
       - mongo
 
   frontend:
-    build: ./GroceryFE
+    build: ./GroceryAppFE
     container_name: grocery-frontend
     ports:
       - "3000:80"
